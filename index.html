@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBookShelf</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Book Shlef</h1>
+      <button id="openModal">Add a book</button>
+    </header>
+    <dialog id="addBookModal">
+      <form id="bookForm" method="dialog">
+        <input
+          type="text"
+          id="name"
+          placeholder="Book title"
+          autofocus
+          required
+        />
+        <input type="text" id="author" placeholder="Author" required />
+        <input
+          type="number"
+          id="pages"
+          placeholder="number of pages"
+          required
+        />
+        <div class="checkbox-group">
+          <label for="readStatus">Have you read the book?</label>
+          <label class="toggle">
+            <input type="checkbox" id="readStatus" class="visually-hidden" />
+          </label>
+        </div>
+        <button type="submit">Add to liberary</button>
+      </form>
+      <button id="closeModal">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="18px"
+          viewBox="0 -960 960 960"
+          width="18px"
+          fill="#00ff94"
+        >
+          <path
+            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+          />
+        </svg>
+      </button>
+    </dialog>
+
+    <div class="cards-container" id="container">
+      <div class="book-card">
+        <h3 class="book-title">Orbital</h3>
+        <p class="book-author">Samantha Harvey</p>
+        <p class="book-pages">213</p>
+        <button class="read-status-btn">Read</button>
+        <button class="delete-btn">Delete</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
